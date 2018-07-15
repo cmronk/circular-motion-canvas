@@ -2,15 +2,17 @@
 const canvas = document.querySelector('canvas')
 const c = canvas.getContext('2d')
 
-canvas.width = innerWidth
-canvas.height = innerHeight
+canvas.width = innerWidth;
+canvas.height = maxheight=500;
 
 const mouse = {
     x: innerWidth / 2,
     y: innerHeight / 2
 }
 
-const colors = ['#524948', '#57467B', '#7CB4B8', '#70F8BA', '#CAFE48'];
+// const colors = ['#524948', '#57467B', '#7CB4B8', '#70F8BA', '#CAFE48'];
+const colors = ['#F46036', '#5B85AA', '#414770', '#372248', '#171123'];
+
 
 // Event Listeners
 addEventListener('mousemove', event => {
@@ -41,7 +43,7 @@ function Particles(x, y, radius, color) {
     this.color = color;
     this.radians = Math.random() * Math.PI * 2;
     this.velocity = 0.05;
-    this.distanceFromCenter = randomIntFromRange(50, 120);
+    this.distanceFromCenter = randomIntFromRange(50, 200);
     this.lastMouse = {x: x, y: y};
 
 
@@ -51,8 +53,8 @@ function Particles(x, y, radius, color) {
         this.radians += this.velocity;
 
         // drag effect
-        this.lastMouse.x += (mouse.x - this.lastMouse.x) * 0.05;
-        this.lastMouse.y += (mouse.y - this.lastMouse.y) * 0.05;
+        this.lastMouse.x += (mouse.x - this.lastMouse.x) * 0.1;
+        this.lastMouse.y += (mouse.y - this.lastMouse.y) * 0.1;
 
         // this is what makes circular motion!
         this.x = this.lastMouse.x + Math.cos(this.radians) * this.distanceFromCenter;
@@ -87,7 +89,7 @@ let particles
 function init() {
     particles = []
 
-    for (let i = 0; i < 150; i++) {
+    for (let i = 0; i < 500; i++) {
         const radius = (Math.random() * 2) + 1;
         particles.push(new Particles(canvas.width / 2, canvas.height / 2, radius, randomColor(colors)));
     }
@@ -97,7 +99,8 @@ function init() {
 // Animation Loop
 function animate() {
     requestAnimationFrame(animate)
-    c.fillStyle = "rgba(255, 255, 255, 0.05)";
+    // c.fillStyle = "rgba(255, 255, 255, 0.05)";
+    c.fillStyle = "rgba(244, 96, 54, 0.05)";
     // this clears screen, so it doesn't draw on top 
     // c.clearRect(0, 0, canvas.width, canvas.height)
     c.fillRect(0, 0, canvas.width, canvas.height)

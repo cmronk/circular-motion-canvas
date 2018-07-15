@@ -6,44 +6,115 @@
     <title>Canvas Template</title>
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.2/css/bootstrap.min.css" integrity="sha384-Smlep5jCw/wG7hdkwQ/Z5nLIefveQRIY9nfy6xoR1uRYBtpZgI6339F5dgvm/e9B"
         crossorigin="anonymous">
+    <!-- font -->
+    <link href="https://fonts.googleapis.com/css?family=Archivo+Narrow|Asap" rel="stylesheet">
+
     <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
         crossorigin="anonymous"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49"
         crossorigin="anonymous"></script>
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.2/js/bootstrap.min.js" integrity="sha384-o+RDsa0aLu++PJvFqy8fFScvbHFLtbvScb8AjopnFD+iEQ7wo/CG0xlczd+2O/em"
         crossorigin="anonymous"></script>
-    <style>
-    </style>
+    <link href="css/style.css" rel="stylesheet">
 </head>
 
 <body>
-    <!-- Navigation -->
-    <nav class="navbar navbar-expand-lg navbar-light sticky-top" id="mainNav">
-        <div class="container">
-            <a class="navbar-brand js-scroll-trigger" href="#page-top">Christine M Ronk</a>
-            <button class="navbar-toggler navbar-toggler-right" type="button" data-toggle="collapse" data-target="#navbarResponsive"
-                aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
-                <span class="navbar-toggler-icon"></span>
-            </button>
-            <div class="collapse navbar-collapse" id="navbarResponsive">
-                <ul class="navbar-nav ml-auto">
-                    <li class="nav-item">
-                        <a class="nav-link js-scroll-trigger" href="#about">About</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link js-scroll-trigger" href="#portfolio">Portfolio</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link js-scroll-trigger" href="#contact">Contact</a>
-                    </li>
-                </ul>
+
+    <body id="page-top">
+
+        <!-- Navigation -->
+        <nav class="navbar navbar-expand-lg navbar-dark sticky-top" id="mainNav">
+            <div class="container">
+                <a class="navbar-brand js-scroll-trigger" href="#page-top">Christine M Ronk</a>
+                <button class="navbar-toggler navbar-toggler-right" type="button" data-toggle="collapse" data-target="#navbarResponsive"
+                    aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse" id="navbarResponsive">
+                    <ul class="navbar-nav ml-auto">
+                        <li class="nav-item">
+                            <a class="nav-link js-scroll-trigger" href="#about">About</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link js-scroll-trigger" href="#portfolio">Portfolio</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link js-scroll-trigger" href="#contact">Contact</a>
+                        </li>
+                    </ul>
+                </div>
             </div>
-        </div>
-    </nav>
-                <canvas></canvas>
+        </nav>
+        
+        <!-- interactive canvas -->
+        <canvas class="particles" width="2880" height="1768" style="width: 100%; height: 100%;">What happens if i put stuff here?</canvas>
 
 
-    <script type="text/javascript" src="js/canvas.js"></script>
-</body>
+        <header class="masthead text-center d-flex" id="about">
+            <div class="container my-auto">
+                <div class="row">
+                    <div class="col-lg-10 mx-auto">
+                        <h1 class="text-uppercase">
+                            <strong>Web Developer Looking to learn something new every day</strong>
+                        </h1>
+                        <hr>
+                    </div>
+                    <div class="col-lg-8 mx-auto">
+                        <p class="text-faded mb-5">Hello! I am currently a freelance web developer looking to use my past experience in sales and customer
+                            service to make a difference. In my spare time, I love to create things that range anywhere from
+                            music to origami to paintings... you name it.</p>
+                    </div>
+                </div>
+            </div>
+        </header>
+
+        <br>
+        <br>
+        <br>
+
+        <!-- portfolio section -->
+        <!-- contact section -->
+        <section id="contact">
+            <div class="container">
+                <div class="row">
+                    <div class="col-lg-8 mx-auto text-center">
+                        <h2 class="section-heading">Connect With Me!</h2>
+                        <br>
+                        <div class="connect">
+                            <a href="https://github.com/cmronk" target="_blank">
+                                <img src="img/github.svg" height=75px width=75px>
+                            </a>
+                            <a href="https://linkedin.com/in/christine-ronk-61244b152" target="_blank">
+                                <img src="img/Linkedin.svg.png" height=75px width=75px>
+                            </a>
+                            <a href="https://stackexchange.com/users/12928161/christine-ronk" target="_blank">
+                                <img src="img/stackoverflow.png" height=75px width=75px>
+                            </a>
+                        </div>
+                        <br>
+                        <br>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-lg-4">
+                    </div>
+                    <div class="col-lg-4 mr-auto text-center">
+                        <br>
+                        <i class="fa fa-envelope-o fa-3x mb-3 sr-contact"></i>
+                        <p>
+                            <br>
+                            <a href="mailto:your-email@your-domain.com">christinemronk@gmail.com</a>
+                        </p>
+                    </div>
+                    <div class="col-lg-4"></div>
+                </div>
+            </div>
+        </section>
+
+
+
+
+        <script type="text/javascript" src="js/canvas.js"></script>
+    </body>
 
 </html>
