@@ -1,20 +1,16 @@
 #mainNav {
-    background-color: #5b85AA;
-}
-.navbar-toggler {
-  color: white;
-  border: 1px solid white;
+    background-color: #403F4C;
 }
 body {
     font-family: 'Archivo Narrow', sans-serif;  
-    /* background-color: #372248;  */
-    color: white; 
+    background-color: #E84855; 
+    color: #EFBCD5; 
 }
 h1 {
     font-family: 'Asap', sans-serif; 
-    color: #F46036
+    color:  #F9DC5C;
 }
 a {
-    color: white;
+    color: #3185FC;
 }
 

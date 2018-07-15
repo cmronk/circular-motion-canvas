@@ -10,8 +10,8 @@ const mouse = {
     y: innerHeight / 2
 }
 
-// const colors = ['#524948', '#57467B', '#7CB4B8', '#70F8BA', '#CAFE48'];
-const colors = ['#F46036', '#5B85AA', '#414770', '#372248', '#171123'];
+const colors = ['#403F4C', '#E84855', '#F9DC5C', '#3185FC', '#EFBCD5'];
+// const colors = ['#5386E4', '#4C4B63', '#949396', '#ABA8B2', '#C3C3C3'];
 
 
 // Event Listeners
@@ -52,9 +52,9 @@ function Particles(x, y, radius, color) {
         // move points over time
         this.radians += this.velocity;
 
-        // // drag effect
-        // this.lastMouse.x += (mouse.x - this.lastMouse.x) * 0.1;
-        // this.lastMouse.y += (mouse.y - this.lastMouse.y) * 0.1;
+        // drag effect
+        this.lastMouse.x += (mouse.x - this.lastMouse.x) * 0.1;
+        this.lastMouse.y += (mouse.y - this.lastMouse.y) * 0.1;
 
         // this is what makes circular motion!
         this.x = this.lastMouse.x + Math.cos(this.radians) * this.distanceFromCenter;
@@ -79,9 +79,6 @@ function Particles(x, y, radius, color) {
 
 }
 
-// Particles.prototype.update = function() {
-//     this.draw()
-// }
 
 
 // Implementation
@@ -89,18 +86,17 @@ let particles
 function init() {
     particles = []
 
-    for (let i = 0; i < 500; i++) {
+    for (let i = 0; i < 250; i++) {
         const radius = (Math.random() * 2) + 1;
         particles.push(new Particles(canvas.width / 2, canvas.height / 2, radius, randomColor(colors)));
     }
-    // console.log(particles)
 }
 
 // Animation Loop
 function animate() {
     requestAnimationFrame(animate)
-    // c.fillStyle = "rgba(255, 255, 255, 0.05)";
-    c.fillStyle = "rgba(244, 96, 54, 0.05)";
+    c.fillStyle = "rgba(255, 255, 255, 0.05)";
+    // c.fillStyle = "rgba(rgba(34, 30, 34, 0.05)";
     // this clears screen, so it doesn't draw on top 
     // c.clearRect(0, 0, canvas.width, canvas.height)
     c.fillRect(0, 0, canvas.width, canvas.height)
