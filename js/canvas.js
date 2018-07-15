@@ -87,7 +87,7 @@ let particles
 function init() {
     particles = []
 
-    for (let i = 0; i < 50; i++) {
+    for (let i = 0; i < 150; i++) {
         const radius = (Math.random() * 2) + 1;
         particles.push(new Particles(canvas.width / 2, canvas.height / 2, radius, randomColor(colors)));
     }
