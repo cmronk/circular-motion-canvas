@@ -52,9 +52,9 @@ function Particles(x, y, radius, color) {
         // move points over time
         this.radians += this.velocity;
 
-        // drag effect
-        this.lastMouse.x += (mouse.x - this.lastMouse.x) * 0.1;
-        this.lastMouse.y += (mouse.y - this.lastMouse.y) * 0.1;
+        // // drag effect
+        // this.lastMouse.x += (mouse.x - this.lastMouse.x) * 0.1;
+        // this.lastMouse.y += (mouse.y - this.lastMouse.y) * 0.1;
 
         // this is what makes circular motion!
         this.x = this.lastMouse.x + Math.cos(this.radians) * this.distanceFromCenter;
