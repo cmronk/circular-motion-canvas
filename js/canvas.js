@@ -2,8 +2,25 @@
 const canvas = document.querySelector('canvas')
 const c = canvas.getContext('2d')
 
+// resizing for mobile 
+function resize() {
+    canvas = document.getElementById('canvas');
+    if (canvas.getContext) {
+        c = canvas.getContext("2d");
+
+        window.addEventListener('resize', resizeCanvas, false);
+        window.addEventListener('orientationchange', resizeCanvas, false);
+        resizeCanvas();
+    }
+};
+
+function resizeCanvas() {
+    canvas.width = window.innerWidth;
+    canvas.height = window.innerHeight;
+};
+
 canvas.width = innerWidth;
-canvas.height = maxheight=500;
+canvas.height = maxheight = 500;
 
 const mouse = {
     x: innerWidth / 2,
@@ -44,7 +61,7 @@ function Particles(x, y, radius, color) {
     this.radians = Math.random() * Math.PI * 2;
     this.velocity = 0.05;
     this.distanceFromCenter = randomIntFromRange(50, 200);
-    this.lastMouse = {x: x, y: y};
+    this.lastMouse = { x: x, y: y };
 
 
     this.update = () => {
